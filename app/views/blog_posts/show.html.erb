@@ -1,0 +1,7 @@
+<%= link_to "Return to All Blogs", root_path %>
+
+<h1>Viewing: <%= @blog_post.title %> </h1>
+<p><%= @blog_post.body %></p>
+
+<%= link_to "Edit", edit_blog_post_path(@blog_post) %>
+<%= button_to "Delete", blog_post_path(@blog_post), method: :delete, data: {turbo_confirm: "Are You Sure"} %>
